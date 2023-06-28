@@ -14,11 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $links = config('store.someLinks');
-    return view('welcome', compact('links'));
+    $data = [
+        'linkNav' => config('store.linkNav'),
+        'comicsInfoShop' => config('store.comicsInfoShop'),
+        'footerDcComics' => config('store.footerDcComics'),
+        'footerShop' => config('store.footerShop'),
+        'footerDc' => config('store.footerDc'),
+        'footerSites' => config('store.footerSites'),
+        'comicx' => config('comics'),
+
+    ];
+
+    return view('welcome', $data);
 });
 
-Route::get('/otherpage', function () {
-    $links = config('store.someLinks');
-    return view('other', compact('links'));
-});
+
+// Route::get('/otherpage', function () {
+//     $links = config('store.someLinks');
+//     return view('other', compact('links'));
+// });

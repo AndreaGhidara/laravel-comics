@@ -7,22 +7,53 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
+ul{
+    list-style: none;
 }
 
-body {
-    background-color: #222;
-    color: white;
+.logo{
+    width: 4rem;
 }
 
-header,
-footer {
-    width: 100%;
-    background: #EEE;
-    color: black;
+.jumbotron{
+
+
+    img{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+    }
 }
 
-header img.logo {
-    height: 2rem;
+.libraryComics{
+    background-color: #000;
+    
+    .boxCard{
+        width: calc(100% / 6);
+        padding: 10px;
+    
+        img{
+            width: 100%;
+            height: 15rem;
+        }
+    }
+}
+
+.footerTop{
+    background-image: url(../img/footer-bg.jpg);
+    background-position: 50% 50%;
+}
+
+.containerLogoFooter{
+    max-height: 350px;
+    overflow: hidden;
+
+    img{
+        transform: translateY(-10%);
+    }
+    
+}
+
+.footerBottom{
+    background-color: #000;
 }
